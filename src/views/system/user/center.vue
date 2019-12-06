@@ -96,7 +96,7 @@ export default {
       Avatar: Avatar,
       ico: 'el-icon-refresh',
       headers: {
-        'Authorization': 'Bearer ' + getToken()
+        'Authorization': 'token ' + getToken()
       }
     }
   },
