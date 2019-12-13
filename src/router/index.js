@@ -11,11 +11,12 @@ NProgress.configure({ showSpinner: false })// NProgress Configuration
 
 const whiteList = ['/login']// no redirect whitelist
 
+// 全局路由钩子函数，在跳转之前或之后进行一些权限的判断
 router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     document.title = to.meta.title + ' - ' + Config.webName
   }
-  NProgress.start() // start progress bar
+  NProgress.start() // progress 进度条 开始
   if (getToken()) {
     // 已登录且要跳转的页面是登录页
     if (to.path === '/login') {
@@ -26,6 +27,7 @@ router.beforeEach((to, from, next) => {
         store.dispatch('GetInfo').then(res => { // 拉取user_info
           // 动态路由，拉取菜单
           loadMenus(next, to)
+        // })
         }).catch((err) => {
           console.log(err)
           store.dispatch('LogOut').then(() => {

@@ -2,14 +2,14 @@ import request from '@/utils/request'
 
 export function count() {
   return request({
-    url: 'api/visits',
+    url: 'api/visits/',
     method: 'post'
   })
 }
 
 export function get() {
   return request({
-    url: 'api/visits',
+    url: 'api/visits/',
     method: 'get'
   })
 }

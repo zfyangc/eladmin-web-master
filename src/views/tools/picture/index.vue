@@ -125,7 +125,7 @@ export default {
       delLoading: false,
       delAllLoading: false,
       headers: {
-        'Authorization': 'Bearer ' + getToken()
+        'Authorization': ' Token ' + getToken()
       },
       dialog: false,
       dialogImageUrl: '',

@@ -123,7 +123,9 @@ export default {
           this.$store.dispatch('Login', user).then(() => {
             this.loading = false
             this.$router.push({ path: this.redirect || '/' })
-          }).catch(() => {
+          }).catch((error) => {
+            console.log(error)
+            console.log('2123123131313132313')
             this.loading = false
             this.getCode()
           })

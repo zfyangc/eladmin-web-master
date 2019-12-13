@@ -29,7 +29,7 @@ export default {
   data() {
     return {
       headers: {
-        'Authorization': 'Bearer ' + getToken()
+        'Authorization': ' Token ' + getToken()
       },
       loading: false, form: { subject: '', tos: [], content: '' },
       tos: [{
