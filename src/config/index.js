@@ -13,7 +13,7 @@ export default {
   /**
    * @description 此处修改网站名称
    */
-  webName: 'DATA_ARCHIVING_WEB',
+  webName: 'Data Archiving',
   /**
    * @description 是否只保持一个子菜单的展开
    */
